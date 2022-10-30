@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT rapport (mandat+) >
+<!ELEMENT mandant (expediteur, destinateur) >
+<!ELEMENT expediteur EMPTY >
+<!ELEMENT destinateur EMPTY >
+
+<!ATTLIST mandat 
+                num NMTOKEN #REQUIRED
+                date CDATA #REQUIRED
+                montant CDATA #REQUIRED
+                etat (reçu|non_reçu) 'non_reçu' >
+                
+                
+<!ATTLIST expediteur
+                cin CDATA #REQUIRED
+                nom CDATA #REQUIRED
+                prenom CDATA #REQUIRED
+                ville CDATA #IMPLIED >
+                
+                
+<!ATTLIST destinateur 
+                cin CDATA #REQUIRED
+                nom CDATA #REQUIRED
+                prenom CDATA #REQUIRED
+                ville CDATA #IMPLIED >
